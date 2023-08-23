@@ -1,6 +1,5 @@
-
 #!/usr/bin/bash
-echo "Please enter the number: "
+echo -n "Please enter the number: "
 read num
 if [ $((num % 2)) -eq 0 ]; then
     echo "The number is even."

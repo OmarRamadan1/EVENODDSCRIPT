@@ -250,12 +250,12 @@ table.tight td, table.tight th { padding: 6px 10px; }
 /* =========================================================================
    TOC (generated at build time from the pages themselves)
    ========================================================================= */
-.toc { columns: 2; column-gap: 48px; }
+.toc { columns: 3; column-gap: 36px; }
 .toc.three { columns: 3; column-gap: 34px; }
-.toc .sec { break-inside: avoid; margin-bottom: 20px; }
+.toc .sec { break-inside: avoid; margin-bottom: 16px; }
 .toc .sec > .h4 { border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin-bottom: 8px; }
 .toc .it { display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
-  font-size: 12px; font-weight: 300; line-height: 1.95; }
+  font-size: 12px; font-weight: 300; line-height: 1.78; }
 .toc .it .pg { font-family: var(--la-text); font-size: 11px; color: var(--smoke); direction: ltr; }
 .toc .it .dots { flex: 1; border-bottom: 1px dotted rgba(61,69,48,.22); transform: translateY(-3px); }
 

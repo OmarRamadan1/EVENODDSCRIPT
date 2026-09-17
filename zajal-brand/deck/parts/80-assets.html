@@ -1,0 +1,277 @@
+<!-- ===================== DIVIDER 08 ===================== -->
+<section class="page divider no-chrome" style="background:var(--ink)">
+  <div style="position:absolute;inset:0;background-image:url('../assets/pattern/forest-emboss.jpg');background-size:cover;background-position:center;opacity:.55"></div>
+  <div class="inner">
+    <div class="idx">08</div>
+    <div class="h1" style="margin-top:-6px">الأصول البصرية</div>
+    <div class="rule"></div>
+    <div class="eyebrow">Visual Assets</div>
+  </div>
+</section>
+
+<!-- ===================== PATTERN ===================== -->
+<section class="page" data-section="الأصول البصرية" data-toc="النقشة — القواعد">
+  <div class="body">
+    <div class="head">
+      <div class="kicker"><span class="eyebrow">The pattern</span></div>
+      <div class="h1">النقشة — القواعد</div>
+      <hr>
+      <p class="dek small">
+        النقشة هي ثاني أقوى أصل بعد الشعار: حروف عربية متشابكة، مأخوذة من نفس يد الخط التي كُتب بها
+        الاسم. هي التي تجعل أي سطح «زَجَل» حتى بلا شعار.
+      </p>
+    </div>
+
+    <div class="split-31" style="gap:36px">
+      <div class="grid g5" style="gap:12px">
+        <div>
+          <div class="ph" style="height:180px;background-image:url('../assets/pattern/ink-on-white.jpg')"></div>
+          <p class="tiny" style="margin-top:8px">حبر على أبيض<br><span style="color:var(--smoke)">للمطبوعات الداخلية</span></p>
+        </div>
+        <div>
+          <div class="ph" style="height:180px;background-image:url('../assets/pattern/olive-emboss.jpg')"></div>
+          <p class="tiny" style="margin-top:8px">زيتوني على زيتوني<br><span style="color:var(--smoke)">الاستخدام الأساسي</span></p>
+        </div>
+        <div>
+          <div class="ph" style="height:180px;background-image:url('../assets/pattern/forest-emboss.jpg')"></div>
+          <p class="tiny" style="margin-top:8px">حبر على حبر<br><span style="color:var(--smoke)">الأسطح الداكنة</span></p>
+        </div>
+        <div>
+          <div class="ph" style="height:180px;background-image:url('../assets/pattern/latte-emboss.jpg')"></div>
+          <p class="tiny" style="margin-top:8px">لاتيه على لاتيه<br><span style="color:var(--smoke)">مواد الهدايا</span></p>
+        </div>
+        <div>
+          <div class="ph" style="height:180px;background-image:url('../assets/pattern/grey-on-white.jpg')"></div>
+          <p class="tiny" style="margin-top:8px">فاتح على أبيض<br><span style="color:var(--smoke)">خلفيات هادئة</span></p>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card" style="padding:18px 20px">
+          <div class="h4" style="margin-bottom:8px">قواعد الاستخدام</div>
+          <p class="tiny">
+            ١· النقشة دائماً <strong>نغمة على نغمة</strong>: نفس اللون بفارق إضاءة بسيط، لا لونان مختلفان.<br>
+            ٢· لا تدخل تحت الشعار ولا داخل مساحته الفارغة.<br>
+            ٣· تحت النصوص: شفافية لا تتجاوز <span class="mono">8%</span>، وإلا تُقرأ الحروف مع النص.<br>
+            ٤· لا تُدوَّر ولا تُقصّ بزاوية مائلة.<br>
+            ٥· لا تُستخدَم مع صورة فوتوغرافية في نفس السطح.
+          </p>
+        </div>
+        <div class="card latte" style="padding:18px 20px">
+          <div class="h4" style="color:var(--clay);margin-bottom:8px">فحص إلزامي قبل الاعتماد</div>
+          <p class="tiny" style="color:#4a3a2e">
+            الحروف المتشابكة قد تُكوِّن كلمة مقروءة بالصدفة. يجب مراجعة الملف النهائي على يد مدقق
+            لغوي عربي وتوثيق الموافقة — هذه مخاطرة تقع فيها علامات كبيرة كل سنة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PATTERN SPECS ===================== -->
+<section class="page" data-section="الأصول البصرية" data-toc="النقشة — المقاسات والملفات">
+  <div class="body">
+    <div class="head">
+      <div class="kicker"><span class="eyebrow">Pattern specification</span></div>
+      <div class="h1">النقشة — المقاسات والملفات</div>
+      <hr>
+    </div>
+
+    <div style="background:#F6E9DC;border-right:3px solid #8E4B3C;padding:14px 20px;margin-bottom:20px">
+      <p class="tiny">
+        <strong>مشكلة قائمة:</strong> النقشة الحالية ملف صورة (raster) مقصوص، وليست وحدة تكرار
+        متصلة. عند تكرارها على سطح كبير يظهر خط فاصل واضح عند حدود كل نسخة، وعند تكبيرها للكرتونة
+        تتكسّر حوافها. <strong>المطلوب:</strong> إعادة رسمها كوحدة تكرار متجهة (vector seamless tile)
+        قبل أي إنتاج مطبوع.
+      </p>
+    </div>
+
+    <div class="split-31" style="gap:40px">
+      <table>
+        <tr><th style="width:26%">المستوى</th><th>مقاس وحدة التكرار</th><th>أين يُستخدَم</th></tr>
+        <tr><td>كبير جداً</td><td class="mono">160 mm</td><td>خلفيات المعارض، الحوائط، الخلفيات التصويرية</td></tr>
+        <tr><td>كبير</td><td class="mono">90 mm</td><td>الكرتونة الخارجية، شنطة الهدية، كرتونة الشحن</td></tr>
+        <tr><td>متوسط</td><td class="mono">45 mm</td><td>لابيل العبوة، الورق الداخلي، أغلفة السوشيال</td></tr>
+        <tr><td>صغير</td><td class="mono">22 mm</td><td>كارت الهدية، الاستيكر، ظهر كارت العمل</td></tr>
+        <tr style="border:0"><td style="border:0">دقيق</td><td class="mono" style="border:0">10 mm</td><td style="border:0">شريط الحواف فقط — لا يُستخدَم كمساحة</td></tr>
+      </table>
+
+      <div class="stack">
+        <div class="card" style="padding:18px 20px">
+          <div class="h4" style="margin-bottom:8px">مواصفات التسليم</div>
+          <p class="tiny">
+            وحدة تكرار مربعة متصلة بلا فواصل · مسارات متجهة مُحوَّلة (outlined) · بلا خطوط شعرية أقل
+            من <span class="mono">0.25 mm</span> · ملفات <span class="mono">.ai / .svg / .pdf</span>
+            بالإضافة إلى <span class="mono">.png</span> شفافة بدقة 300dpi لكل مستوى.
+          </p>
+        </div>
+        <div class="card plain" style="padding:18px 20px">
+          <div class="h4" style="margin-bottom:8px">في الطباعة</div>
+          <p class="tiny">
+            تُنفَّذ بالنقش البارز أو بفارق ورنيش مطفي/لامع خفيف — لا بحبر ثانٍ. هذا هو مصدر إحساس
+            «الجودة الصامتة» في العبوة، وتكلفته أقل من طباعة لون إضافي.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ART DIRECTION ===================== -->
+<section class="page" data-section="الأصول البصرية" data-toc="التصوير — الاتجاه الفني">
+  <div class="body">
+    <div class="head">
+      <div class="kicker"><span class="eyebrow">Art direction</span></div>
+      <div class="h1">التصوير — الاتجاه الفني</div>
+      <hr>
+    </div>
+
+    <div class="split-31" style="gap:36px">
+      <div class="grid g3" style="gap:14px">
+        <div class="ph" style="height:232px;background-image:url('../assets/photo/bag.jpg')"></div>
+        <div class="ph" style="height:232px;background-image:url('../assets/photo/daisies.jpg')"></div>
+        <div class="ph" style="height:232px;background-image:url('../assets/photo/roses.jpg')"></div>
+      </div>
+
+      <div class="grid g2" style="gap:12px">
+        <div class="card" style="padding:14px 16px">
+          <div class="h4">الضوء</div>
+          <p class="tiny" style="margin-top:6px">مصدر واحد، نهاري، من الجنب أو من الخلف. ظل واضح الحواف لكنه ناعم. ممنوع الفلاش المباشر وممنوع الإضاءة من الأمام.</p>
+        </div>
+        <div class="card" style="padding:14px 16px">
+          <div class="h4">الخامات</div>
+          <p class="tiny" style="margin-top:6px">حجر، كتان، خشب خام، ورق كريمي، ورق العطر. ممنوع الرخام اللامع والأسطح المعدنية العاكسة.</p>
+        </div>
+        <div class="card" style="padding:14px 16px">
+          <div class="h4">المعالجة اللونية</div>
+          <p class="tiny" style="margin-top:6px">دافئة، تشبّع منخفض، الأخضر مسحوب ناحية الزيتوني، الأبيض ليس أبيض بل كريمي. تُوحَّد على كل الصور بنفس الـ preset.</p>
+        </div>
+        <div class="card" style="padding:14px 16px">
+          <div class="h4">التكوين</div>
+          <p class="tiny" style="margin-top:6px">العبوة خارج المنتصف، ومساحة فارغة على اليمين تكفي لسطرين عربيين. هذه المساحة جزء من التصوير لا يُقتطع لاحقاً.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g6" style="gap:10px;margin-top:16px">
+      <div class="card plain" style="padding:12px 14px"><p class="tiny"><strong>١ · البطل</strong><br>العبوة وحدها على خلفية سادة</p></div>
+      <div class="card plain" style="padding:12px 14px"><p class="tiny"><strong>٢ · تفصيلة</strong><br>ماكرو للابيل والغطا والملمس</p></div>
+      <div class="card plain" style="padding:12px 14px"><p class="tiny"><strong>٣ · في اليد</strong><br>يد حقيقية، بلا مانيكير لافت</p></div>
+      <div class="card plain" style="padding:12px 14px"><p class="tiny"><strong>٤ · في السياق</strong><br>على تسريحة، في شنطة، على مكتب</p></div>
+      <div class="card plain" style="padding:12px 14px"><p class="tiny"><strong>٥ · الهدية</strong><br>العلبة والكارت ولحظة الفتح</p></div>
+      <div class="card plain" style="padding:12px 14px"><p class="tiny"><strong>٦ · العائلة</strong><br>التشكيلة كاملة بترتيب ثابت</p></div>
+    </div>
+    <p class="tiny" style="margin-top:10px">كل إطلاق يسلّم هذه الست لقطات كحد أدنى، بنفس الترتيب ونفس المعالجة.</p>
+  </div>
+</section>
+
+<!-- ===================== NOT THIS ===================== -->
+<section class="page" data-section="الأصول البصرية" data-toc="التصوير — مش كده">
+  <div class="body">
+    <div class="head">
+      <div class="kicker"><span class="eyebrow">Not this</span></div>
+      <div class="h1">التصوير — مش كده</div>
+      <hr>
+      <p class="dek small">
+        الصور الحالية مُولَّدة أو مركّبة، وفيها اختلاف في الإضاءة ودرجة حرارة اللون بين لقطة وأخرى.
+        تصلح مؤقتاً للعرض، ولا تصلح للإطلاق. الجدول التالي يحدد ما يُستبعَد.
+      </p>
+    </div>
+
+    <div class="grid g2" style="gap:36px">
+      <div>
+        <div class="grid g3" style="gap:12px">
+          <div style="position:relative">
+            <div class="ph" style="height:150px;background-image:url('../assets/photo/roses.jpg');filter:saturate(1.8) contrast(1.2)"></div>
+            <span class="cross" style="position:absolute;top:6px;right:8px;font-size:18px">✕</span>
+          </div>
+          <div style="position:relative">
+            <div class="ph" style="height:150px;background-image:url('../assets/photo/bag.jpg');filter:brightness(1.3) hue-rotate(-12deg)"></div>
+            <span class="cross" style="position:absolute;top:6px;right:8px;font-size:18px">✕</span>
+          </div>
+          <div style="position:relative">
+            <div class="ph" style="height:150px;background-image:url('../assets/photo/daisies.jpg');filter:grayscale(.7)"></div>
+            <span class="cross" style="position:absolute;top:6px;right:8px;font-size:18px">✕</span>
+          </div>
+        </div>
+        <p class="tiny" style="margin-top:10px">
+          ثلاث معالجات مختلفة لنفس العلامة على نفس الصفحة — أسرع طريقة لتبدو العلامة غير محترفة.
+        </p>
+      </div>
+
+      <div class="stack">
+        <div class="card" style="padding:16px 20px">
+          <div class="judge dont" style="margin-bottom:8px">مرفوض</div>
+          <p class="tiny">
+            صور مُولَّدة بالذكاء الاصطناعي في أي مادة رسمية · أيادٍ أو انعكاسات غير منطقية ·
+            إطارات وبراويز جاهزة من القوالب · فلاش مباشر · خلفيات مزحومة بالورد ·
+            تشبّع مرتفع · لوجو مطبوع فوق منطقة مزحومة من الصورة.
+          </p>
+        </div>
+        <div class="card" style="padding:16px 20px">
+          <div class="judge do" style="margin-bottom:8px">المطلوب</div>
+          <p class="tiny">
+            جلسة تصوير واحدة لكل تشكيلة، بنفس المصوّر ونفس الإضاءة ونفس الـ preset ·
+            ملف <span class="mono">.dng</span> أو <span class="mono">.tiff</span> أصلي محفوظ ·
+            حقوق استخدام مكتوبة ومفتوحة زمنياً · تسليم بقصّات 1:1 و4:5 و9:16 من نفس اللقطة.
+          </p>
+        </div>
+        <div class="card plain" style="padding:16px 20px">
+          <p class="tiny">
+            <strong>الحد الأدنى للانطلاق:</strong> ٦ لقطات حقيقية لكل عطر. أقل من كده، الأفضل
+            الاعتماد على تصوير المنتج على خلفية سادة بدل التركيب.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GRID ===================== -->
+<section class="page" data-section="الأصول البصرية" data-toc="الشبكة والتخطيط">
+  <div class="body">
+    <div class="head">
+      <div class="kicker"><span class="eyebrow">Grid &amp; layout</span></div>
+      <div class="h1">الشبكة والتخطيط</div>
+      <hr>
+      <p class="dek small">هذه الوثيقة نفسها مبنية على الشبكة الموصوفة هنا. كل صفحة فيها تخضع لنفس الهوامش.</p>
+    </div>
+
+    <div class="split-31" style="gap:40px">
+      <div style="position:relative;height:300px;background:var(--ivory);border:1px solid var(--rule-2)">
+        <div style="position:absolute;inset:24px 34px 20px;display:grid;grid-template-columns:repeat(12,1fr);gap:10px">
+          <div style="background:rgba(157,164,113,.28)"></div><div style="background:rgba(157,164,113,.28)"></div>
+          <div style="background:rgba(157,164,113,.28)"></div><div style="background:rgba(157,164,113,.28)"></div>
+          <div style="background:rgba(157,164,113,.28)"></div><div style="background:rgba(157,164,113,.28)"></div>
+          <div style="background:rgba(157,164,113,.28)"></div><div style="background:rgba(157,164,113,.28)"></div>
+          <div style="background:rgba(157,164,113,.28)"></div><div style="background:rgba(157,164,113,.28)"></div>
+          <div style="background:rgba(157,164,113,.28)"></div><div style="background:rgba(157,164,113,.28)"></div>
+        </div>
+        <div class="tiny" style="position:absolute;top:6px;right:34px">الهامش العلوي</div>
+        <div class="tiny" style="position:absolute;bottom:4px;right:34px">الهامش السفلي</div>
+      </div>
+
+      <div class="stack">
+        <div class="card" style="padding:18px 20px">
+          <div class="h4" style="margin-bottom:8px">شبكة الوثائق والعروض (16:9)</div>
+          <table class="tight">
+            <tr><td style="width:56%">الأعمدة</td><td class="mono">12</td></tr>
+            <tr><td>المسافة بين الأعمدة</td><td class="mono">24 px</td></tr>
+            <tr><td>الهامش الجانبي</td><td class="mono">76 px</td></tr>
+            <tr><td>الهامش العلوي / السفلي</td><td class="mono">54 / 46 px</td></tr>
+            <tr style="border:0"><td style="border:0">وحدة الشبكة الرأسية</td><td class="mono" style="border:0">8 px</td></tr>
+          </table>
+        </div>
+        <div class="card plain" style="padding:18px 20px">
+          <div class="h4" style="margin-bottom:8px">قواعد ثابتة</div>
+          <p class="tiny">
+            القراءة من اليمين: العنوان يمين، والمساحة الفارغة يسار.<br>
+            لا يُوضَع عنصر فوق الهامش أبداً إلا إذا كان ممتداً حتى حافة الصفحة بالكامل (full bleed).<br>
+            كل مسافة رأسية من مضاعفات ٨.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

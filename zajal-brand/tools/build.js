@@ -67,14 +67,14 @@ const RUNTIME = `
   });
 
   // split the sections across the available contents pages by estimated height
-  var cost = groups.map(function (g) { return 46 + g.items.length * 23; });
+  var cost = groups.map(function (g) { return 52 + g.items.length * 22; });
   var total = cost.reduce(function (a, b) { return a + b; }, 0);
   var perHost = total / hosts.length;
   var buckets = hosts.map(function () { return []; });
   var run = 0;
   var k = 0;
   groups.forEach(function (g, i) {
-    if (k < hosts.length - 1 && run > perHost - cost[i] / 2) { k += 1; run = 0; }
+    if (k < hosts.length - 1 && buckets[k].length && run + cost[i] > perHost) { k += 1; run = 0; }
     buckets[k].push(g);
     run += cost[i];
   });

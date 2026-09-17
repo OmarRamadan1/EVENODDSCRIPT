@@ -1,0 +1,270 @@
+/* =========================================================================
+   ZAJAL — Brand Guidelines deck
+   Design system for the document itself. One grid, one type scale, one set
+   of margins across every page. Canvas: 1280 x 720 (16:9).
+   ========================================================================= */
+
+:root {
+  /* --- brand palette (verified values, see tools/colors.json) --- */
+  --olive:  #9DA471;
+  --deep:   #6E734A;
+  --ink:    #3D4530;
+  --latte:  #C5B096;
+  --clay:   #6D5847;
+  --cream:  #FEF3E1;
+  --ivory:  #FBF8EF;
+  --white:  #FFFFFF;
+  --smoke:  #8C8B80;
+
+  --rule:   rgba(61, 69, 48, 0.16);
+  --rule-2: rgba(61, 69, 48, 0.08);
+
+  /* --- document grid --- */
+  --page-w: 1280px;
+  --page-h: 720px;
+  --mx: 76px;          /* side margin  */
+  --mt: 54px;          /* top margin   */
+  --mb: 46px;          /* bottom margin*/
+  --gut: 24px;         /* column gutter*/
+  --unit: 8px;         /* baseline unit*/
+
+  /* --- type --- */
+  --ar-display: 'Amiri', 'Noto Naskh Arabic', serif;
+  --ar-text: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', sans-serif;
+  --la-display: 'Cormorant Garamond', 'Amiri', serif;
+  --la-text: 'IBM Plex Sans', 'Inter', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  font-family: var(--ar-text);
+  color: var(--ink);
+  background: #6b6b63;
+  direction: rtl;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-rendering: geometricPrecision;
+}
+
+/* =========================================================================
+   PAGE SHELL
+   ========================================================================= */
+
+.page {
+  position: relative;
+  width: var(--page-w);
+  height: var(--page-h);
+  overflow: hidden;
+  background: var(--cream);
+  page-break-after: always;
+  break-after: page;
+  margin: 0 auto 26px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, .28);
+}
+
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+/* content area, respects the document margins */
+.body {
+  position: absolute;
+  inset: var(--mt) var(--mx) var(--mb);
+}
+
+/* running header + folio ------------------------------------------------ */
+.rh {
+  position: absolute;
+  top: 26px; right: var(--mx); left: var(--mx);
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 10px; letter-spacing: .06em;
+  color: rgba(61, 69, 48, .42);
+}
+.rh .rh-en { font-family: var(--la-text); letter-spacing: .16em; text-transform: uppercase; font-size: 9.5px; }
+.folio {
+  position: absolute; bottom: 20px; left: var(--mx);
+  font-family: var(--la-text); font-size: 10px; font-weight: 500;
+  letter-spacing: .1em; color: rgba(61, 69, 48, .42);
+}
+.folio-ar { position: absolute; bottom: 20px; right: var(--mx);
+  font-size: 10px; color: rgba(61, 69, 48, .34); letter-spacing: .02em; }
+
+.page.dark { background: var(--ink); color: var(--cream); }
+.page.dark .rh, .page.dark .folio, .page.dark .folio-ar { color: rgba(254, 243, 225, .45); }
+.page.dark .h1, .page.dark .h2 { color: var(--cream); }
+.page.olive { background: var(--olive); }
+.page.no-chrome .rh, .page.no-chrome .folio, .page.no-chrome .folio-ar { display: none; }
+
+/* =========================================================================
+   TYPE SCALE   (Arabic and Latin carry separate line-heights on purpose —
+   Arabic ascenders/descenders need more leading at the same optical size.)
+   ========================================================================= */
+
+.h1 { font-family: var(--ar-display); font-size: 62px; line-height: 1.24; font-weight: 400; color: var(--ink); }
+.h2 { font-family: var(--ar-display); font-size: 42px; line-height: 1.3;  font-weight: 400; color: var(--deep); }
+.h3 { font-family: var(--ar-text); font-size: 20px; line-height: 1.5; font-weight: 600; color: var(--ink); }
+.h4 { font-family: var(--ar-text); font-size: 15px; line-height: 1.55; font-weight: 600; color: var(--deep); }
+.lead { font-family: var(--ar-text); font-size: 17px; line-height: 1.95; font-weight: 300; color: var(--ink); }
+.body-t { font-family: var(--ar-text); font-size: 14px; line-height: 2.0; font-weight: 300; }
+.small { font-family: var(--ar-text); font-size: 12px; line-height: 1.85; font-weight: 300; color: rgba(61,69,48,.78); }
+.tiny { font-family: var(--ar-text); font-size: 10.5px; line-height: 1.7; font-weight: 300; color: rgba(61,69,48,.62); }
+.quote { font-family: var(--ar-display); font-size: 30px; line-height: 1.7; font-weight: 400; color: var(--deep); }
+
+.en { font-family: var(--la-text); direction: ltr; unicode-bidi: isolate; }
+.en-d { font-family: var(--la-display); direction: ltr; unicode-bidi: isolate; }
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; direction: ltr; unicode-bidi: isolate;
+        font-size: 11px; letter-spacing: .01em; }
+
+.eyebrow {
+  font-family: var(--la-text); direction: ltr; text-transform: uppercase;
+  font-size: 9.5px; font-weight: 500; letter-spacing: .22em; color: var(--olive);
+}
+.eyebrow-ar { font-family: var(--ar-text); font-size: 11px; font-weight: 500;
+  letter-spacing: .02em; color: var(--deep); opacity: .85; }
+
+strong, b { font-weight: 600; }
+
+/* section head block, repeated identically on every content page --------- */
+.head { margin-bottom: 30px; }
+.head .h1 { font-size: 46px; margin-bottom: 8px; }
+.head .kicker { display: flex; gap: 14px; align-items: baseline; margin-bottom: 12px; }
+.head hr { border: 0; border-top: 1px solid var(--rule); margin-top: 18px; }
+.head .dek { max-width: 760px; margin-top: 14px; }
+
+/* =========================================================================
+   LAYOUT HELPERS
+   ========================================================================= */
+
+.grid { display: grid; gap: var(--gut); }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.g5 { grid-template-columns: repeat(5, 1fr); }
+.g6 { grid-template-columns: repeat(6, 1fr); }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.split-13 { display: grid; grid-template-columns: 1fr 2fr; gap: 44px; }
+.split-31 { display: grid; grid-template-columns: 2fr 1fr; gap: 44px; }
+.stack > * + * { margin-top: 12px; }
+.stack-lg > * + * { margin-top: 22px; }
+.row { display: flex; gap: 16px; }
+.center { text-align: center; }
+.mt-a { margin-top: auto; }
+.fill { height: 100%; display: flex; flex-direction: column; }
+
+.card {
+  background: var(--ivory); border: 1px solid var(--rule-2);
+  padding: 22px 24px;
+}
+/* only stretch cards that are grid cells; stacked cards size to their content */
+.grid > .card { height: 100%; }
+.card.olive { background: var(--olive); color: var(--cream); border-color: transparent; }
+.card.olive .h3, .card.olive .h4 { color: var(--cream); }
+.card.deep { background: var(--deep); color: var(--cream); border-color: transparent; }
+.card.deep .h3, .card.deep .h4 { color: var(--cream); }
+.card.ink { background: var(--ink); color: var(--cream); border-color: transparent; }
+.card.ink .h3, .card.ink .h4 { color: var(--cream); }
+.card.latte { background: var(--latte); border-color: transparent; }
+.card.plain { background: transparent; border: 1px solid var(--rule); }
+
+.num {
+  font-family: var(--la-display); font-size: 40px; line-height: 1;
+  color: var(--olive); font-weight: 400; direction: ltr;
+}
+
+/* do / don't ------------------------------------------------------------- */
+.judge { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; }
+.judge::before {
+  content: ''; width: 16px; height: 16px; border-radius: 50%;
+  display: inline-block; flex: 0 0 16px;
+}
+.judge.do { color: #4B6B3A; }
+.judge.do::before { background: #4B6B3A; }
+.judge.dont { color: #8E4B3C; }
+.judge.dont::before { background: #8E4B3C; }
+
+.tick { color: #4B6B3A; font-weight: 600; }
+.cross { color: #8E4B3C; font-weight: 600; }
+
+/* tables ----------------------------------------------------------------- */
+table { width: 100%; border-collapse: collapse; font-family: var(--ar-text); }
+th, td { text-align: right; padding: 8px 12px; border-bottom: 1px solid var(--rule-2); vertical-align: middle; }
+th { font-size: 11px; font-weight: 600; color: var(--deep); border-bottom: 1px solid var(--rule);
+     letter-spacing: .01em; }
+td { font-size: 12px; font-weight: 300; line-height: 1.6; }
+td.mono, th.mono { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; direction: ltr; text-align: left; }
+table.tight td, table.tight th { padding: 6px 10px; }
+
+/* logo rendered from a single alpha mask so any colourway is one CSS line   */
+.mark {
+  -webkit-mask-image: url('../assets/logo/mark-mask.png');
+  mask-image: url('../assets/logo/mark-mask.png');
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+  background-color: currentColor;
+  aspect-ratio: 1233 / 491;
+}
+
+/* full bilingual lockup: mark + Latin, optically aligned                    */
+.lockup { display: flex; flex-direction: column; align-items: center; color: var(--ink); }
+.lockup .mark { width: 100%; }
+.lockup .latin {
+  font-family: var(--la-display); direction: ltr; font-weight: 500;
+  color: currentColor; white-space: nowrap;
+}
+
+.swatch { height: 84px; display: flex; align-items: flex-end; padding: 10px 12px; }
+
+.tag {
+  display: inline-block; font-family: var(--la-text); direction: ltr;
+  font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase;
+  padding: 3px 8px; border: 1px solid currentColor; opacity: .7;
+}
+
+.pill { display:inline-block; font-size:11px; padding:3px 10px; border-radius:11px;
+        background: rgba(61,69,48,.07); color: var(--deep); }
+
+/* pattern / photo frames -------------------------------------------------- */
+.ph { background-size: cover; background-position: center; }
+.pat { background-size: 150px; background-repeat: repeat; }
+
+/* section divider --------------------------------------------------------- */
+.divider { display: flex; align-items: center; justify-content: center; }
+.divider .inner { text-align: center; position: relative; z-index: 2; }
+.divider .h1 { color: var(--cream); font-size: 72px; }
+.divider .eyebrow { color: rgba(254, 243, 225, .7); }
+.divider .rule { width: 64px; height: 1px; background: rgba(254,243,225,.5); margin: 22px auto; }
+.divider .idx { font-family: var(--la-display); font-size: 120px; color: rgba(254,243,225,.22);
+  line-height: 1; direction: ltr; }
+
+/* =========================================================================
+   COVER
+   ========================================================================= */
+/* The supplied pattern artwork is a raster crop and is NOT a seamless tile, so
+   every full-bleed use scales one copy to cover rather than repeating it.
+   See the pattern section for the seamless vector tile that production needs. */
+.cover { position: relative; }
+.cover .tex { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .85; }
+.cover .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(110,115,74,.10), rgba(61,69,48,.22)); }
+
+/* =========================================================================
+   TOC (generated at build time from the pages themselves)
+   ========================================================================= */
+.toc { columns: 2; column-gap: 48px; }
+.toc.three { columns: 3; column-gap: 34px; }
+.toc .sec { break-inside: avoid; margin-bottom: 20px; }
+.toc .sec > .h4 { border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin-bottom: 8px; }
+.toc .it { display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+  font-size: 12px; font-weight: 300; line-height: 1.95; }
+.toc .it .pg { font-family: var(--la-text); font-size: 11px; color: var(--smoke); direction: ltr; }
+.toc .it .dots { flex: 1; border-bottom: 1px dotted rgba(61,69,48,.22); transform: translateY(-3px); }
+
+/* =========================================================================
+   PRINT
+   ========================================================================= */
+@page { size: 1280px 720px; margin: 0; }
+
+@media print {
+  body { background: none; }
+  .page { margin: 0; box-shadow: none; }
+}

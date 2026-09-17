@@ -1,0 +1,375 @@
+{
+ "colors": {
+  "olive": {
+   "ar": "زيتوني زَجَل",
+   "en": "Zajal Olive",
+   "hex": "#9DA471",
+   "rgb": [
+    157,
+    164,
+    113
+   ],
+   "cmyk": [
+    4,
+    0,
+    31,
+    36
+   ],
+   "luminance": 0.3491
+  },
+  "deep": {
+   "ar": "زيتوني وظيفي",
+   "en": "Olive Deep",
+   "hex": "#6E734A",
+   "rgb": [
+    110,
+    115,
+    74
+   ],
+   "cmyk": [
+    4,
+    0,
+    36,
+    55
+   ],
+   "luminance": 0.1607
+  },
+  "ink": {
+   "ar": "حبر الزيتون",
+   "en": "Olive Ink",
+   "hex": "#3D4530",
+   "rgb": [
+    61,
+    69,
+    48
+   ],
+   "cmyk": [
+    12,
+    0,
+    30,
+    73
+   ],
+   "luminance": 0.0546
+  },
+  "latte": {
+   "ar": "لاتيه",
+   "en": "Latte",
+   "hex": "#C5B096",
+   "rgb": [
+    197,
+    176,
+    150
+   ],
+   "cmyk": [
+    0,
+    11,
+    24,
+    23
+   ],
+   "luminance": 0.4512
+  },
+  "clay": {
+   "ar": "طين",
+   "en": "Clay",
+   "hex": "#6D5847",
+   "rgb": [
+    109,
+    88,
+    71
+   ],
+   "cmyk": [
+    0,
+    19,
+    35,
+    57
+   ],
+   "luminance": 0.1069
+  },
+  "cream": {
+   "ar": "كريمي زَجَل",
+   "en": "Zajal Cream",
+   "hex": "#FEF3E1",
+   "rgb": [
+    254,
+    243,
+    225
+   ],
+   "cmyk": [
+    0,
+    4,
+    11,
+    0
+   ],
+   "luminance": 0.9061
+  },
+  "ivory": {
+   "ar": "عاجي",
+   "en": "Ivory",
+   "hex": "#FBF8EF",
+   "rgb": [
+    251,
+    248,
+    239
+   ],
+   "cmyk": [
+    0,
+    1,
+    5,
+    2
+   ],
+   "luminance": 0.9388
+  },
+  "white": {
+   "ar": "أبيض",
+   "en": "White",
+   "hex": "#FFFFFF",
+   "rgb": [
+    255,
+    255,
+    255
+   ],
+   "cmyk": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "luminance": 1.0
+  },
+  "smoke": {
+   "ar": "رمادي دخاني",
+   "en": "Smoke",
+   "hex": "#8C8B80",
+   "rgb": [
+    140,
+    139,
+    128
+   ],
+   "cmyk": [
+    0,
+    1,
+    9,
+    45
+   ],
+   "luminance": 0.256
+  }
+ },
+ "pairs": [
+  {
+   "fg": "ink",
+   "bg": "white",
+   "ratio": 10.04,
+   "verdict": "AAA"
+  },
+  {
+   "fg": "ink",
+   "bg": "ivory",
+   "ratio": 9.45,
+   "verdict": "AAA"
+  },
+  {
+   "fg": "ink",
+   "bg": "cream",
+   "ratio": 9.14,
+   "verdict": "AAA"
+  },
+  {
+   "fg": "clay",
+   "bg": "white",
+   "ratio": 6.69,
+   "verdict": "AA"
+  },
+  {
+   "fg": "clay",
+   "bg": "ivory",
+   "ratio": 6.3,
+   "verdict": "AA"
+  },
+  {
+   "fg": "clay",
+   "bg": "cream",
+   "ratio": 6.1,
+   "verdict": "AA"
+  },
+  {
+   "fg": "deep",
+   "bg": "white",
+   "ratio": 4.98,
+   "verdict": "AA"
+  },
+  {
+   "fg": "ink",
+   "bg": "latte",
+   "ratio": 4.79,
+   "verdict": "AA"
+  },
+  {
+   "fg": "deep",
+   "bg": "ivory",
+   "ratio": 4.69,
+   "verdict": "AA"
+  },
+  {
+   "fg": "deep",
+   "bg": "cream",
+   "ratio": 4.54,
+   "verdict": "AA"
+  },
+  {
+   "fg": "olive",
+   "bg": "ink",
+   "ratio": 3.81,
+   "verdict": "AA Large"
+  },
+  {
+   "fg": "white",
+   "bg": "smoke",
+   "ratio": 3.43,
+   "verdict": "AA Large"
+  },
+  {
+   "fg": "ivory",
+   "bg": "smoke",
+   "ratio": 3.23,
+   "verdict": "AA Large"
+  },
+  {
+   "fg": "latte",
+   "bg": "clay",
+   "ratio": 3.2,
+   "verdict": "AA Large"
+  },
+  {
+   "fg": "cream",
+   "bg": "smoke",
+   "ratio": 3.12,
+   "verdict": "AA Large"
+  },
+  {
+   "fg": "ink",
+   "bg": "smoke",
+   "ratio": 2.92,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "olive",
+   "bg": "white",
+   "ratio": 2.63,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "olive",
+   "bg": "clay",
+   "ratio": 2.54,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "olive",
+   "bg": "ivory",
+   "ratio": 2.48,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "olive",
+   "bg": "cream",
+   "ratio": 2.4,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "deep",
+   "bg": "latte",
+   "ratio": 2.38,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "latte",
+   "bg": "white",
+   "ratio": 2.09,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "deep",
+   "bg": "ink",
+   "ratio": 2.01,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "latte",
+   "bg": "ivory",
+   "ratio": 1.97,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "clay",
+   "bg": "smoke",
+   "ratio": 1.95,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "latte",
+   "bg": "cream",
+   "ratio": 1.91,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "olive",
+   "bg": "deep",
+   "ratio": 1.89,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "latte",
+   "bg": "smoke",
+   "ratio": 1.64,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "ink",
+   "bg": "clay",
+   "ratio": 1.5,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "deep",
+   "bg": "smoke",
+   "ratio": 1.45,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "deep",
+   "bg": "clay",
+   "ratio": 1.34,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "olive",
+   "bg": "smoke",
+   "ratio": 1.3,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "olive",
+   "bg": "latte",
+   "ratio": 1.26,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "cream",
+   "bg": "white",
+   "ratio": 1.1,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "ivory",
+   "bg": "white",
+   "ratio": 1.06,
+   "verdict": "FAIL"
+  },
+  {
+   "fg": "cream",
+   "bg": "ivory",
+   "ratio": 1.03,
+   "verdict": "FAIL"
+  }
+ ]
+}
